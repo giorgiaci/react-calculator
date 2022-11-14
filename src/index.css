@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@700&display=swap');
+
+:root{
+    --primary: #ebebeb;
+    --second: rgb(191 118 189);
+    --dark: #131a26;
+    --ligth: #888;
+}
+.ggHeader{
+    display: flex;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 700;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sono', sans-serif;
+    
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background-image: url("/dist/vecteezy_doodle-math-objects-border_.jpg");
+    background-repeat: no-repeat;
+
+}
+.wrap{
+    background-color: rgb(236 232 232 / 65%);
+}
+.App{
+    display: flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.calculator{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 2px 64px rgb(0 0 0 / 20%);
+    outline: 18px solid var(--primary);
+    background-color: var(--primary);
+}
+.display{
+    padding: 30px;
+    text-align: right;
+    background-color: var(--dark);
+    color: var(--ligth);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 17px;
+    border-radius: 10px;
+
+}
+.display span{
+    font-size: 16px;
+    font: optional;
+    color: var(--ligth);
+}
+button{
+    appearance: none;
+    border: 1px solid transparent;    
+    outline: none;
+    color: #FFF;
+    font-size: 20px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.4;
+}
+button:hover{
+    opacity: 0.9;
+}
+.erase{
+    display: flex;  
+    margin-bottom: 3px;
+
+}
+.erase button{
+    flex: 1 1 0%;
+    background-color: var(--ligth);
+    font-weight: 700;
+}
+.erase button:first-child{
+    border-radius: 3px 0 0 3px;
+}
+.erase button:last-child {
+    border-radius: 0 3px 3px 0;
+}
+.flex-container {
+    display: flex;
+    align-items: left;
+  }
+  
+.operators{
+   display: flex; 
+   flex-direction: column; 
+   width: 20%;
+}
+.operators button{
+    flex: 1 1 0%;
+    background-color: var(--second);
+    color: var(--dark);
+    font-weight: 700;
+    margin: 3px;
+}
+.digits{
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.digits button{   
+    flex: 1 1 31.333%;
+    max-width: 31.333%;
+    background-color: var(--dark);
+    margin: 3px;
 }
